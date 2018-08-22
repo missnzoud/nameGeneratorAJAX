@@ -10,4 +10,8 @@ function loadNames(e) {
     const genre = document.getElementById('genre').value;
     
     const amount = document.getElementById('quantity').value;
+    
+    
+      //build the URL
+    let url = 'http://uinames.com/api/?';
 }
