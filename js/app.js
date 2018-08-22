@@ -32,4 +32,7 @@ function loadNames(e) {
     console.log(url);
      //ajax call 
     xhr = new XMLHttpRequest();
+    //open the connection
+    xhr.open('GET', url, true);
+    
 }
