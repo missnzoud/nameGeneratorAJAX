@@ -1,5 +1,10 @@
 document.querySelector('#generate-names').addEventListener('submit', loadNames);
 
+
+
+
+
+
 function loadNames(e) {
     e.preventDefault();
     
@@ -11,8 +16,7 @@ function loadNames(e) {
     
     const amount = document.getElementById('quantity').value;
     
-    
-      //build the URL
+    //build the URL
     let url = 'http://uinames.com/api/?';
     //read the origin and append to the URL
     
@@ -30,10 +34,13 @@ function loadNames(e) {
         url += `amount=${amount}&`;
     }
     console.log(url);
-     //ajax call 
+    
+    //ajax call 
     xhr = new XMLHttpRequest();
-    //open the connection
+    
+//open the connection
     xhr.open('GET', url, true);
+    
     //execute the function
     xhr.onload = function() {
         if(this.status === 200){
@@ -54,5 +61,7 @@ function loadNames(e) {
         }
          
     }
-    
+    //send the url
+xhr.send();    
 }
+
